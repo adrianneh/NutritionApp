@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="adrianne.nutritionapp.NutritionActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <EditText
+        android:id="@+id/et_carbs"
+        android:layout_width="80dp"
+        android:layout_height="47dp"
+        android:layout_alignStart="@+id/et_totalFat"
+        android:layout_below="@+id/et_calories" />
+
+    <EditText
+        android:id="@+id/et_totalFat"
+        android:layout_width="80dp"
+        android:layout_height="47dp"
+
+        android:layout_below="@+id/et_carbs"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/tv_carbs"
+        tools:layout_editor_absoluteX="186dp"
+        tools:layout_editor_absoluteY="455dp" />
+
+    <EditText
+        android:id="@+id/et_calories"
+        android:layout_width="80dp"
+        android:layout_height="47dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/et_carbs" />
+
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/et_calories"
+        android:layout_marginEnd="28dp"
+        android:text="Add Item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.971"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_cals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/et_calories"
+        android:layout_alignBottom="@+id/et_calories"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:text="Calories" />
+
+    <TextView
+        android:id="@+id/tv_fat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/addButton"
+        android:layout_alignStart="@+id/tv_cals"
+        android:layout_marginBottom="11dp"
+        android:text="Total Fat" />
+
+    <TextView
+        android:id="@+id/tv_carbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/et_totalFat"
+        android:layout_alignStart="@+id/tv_fat"
+        android:text="Carbohydrates" />
+
+
+</RelativeLayout>
