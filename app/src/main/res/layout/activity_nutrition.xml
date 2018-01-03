@@ -42,7 +42,7 @@
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/et_calories"
         android:layout_marginEnd="28dp"
-        android:text="Add Item"
+        android:text="@string/addItem"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.971"
@@ -76,6 +76,5 @@
         android:layout_alignBottom="@+id/et_totalFat"
         android:layout_alignStart="@+id/tv_fat"
         android:text="Carbohydrates" />
-
 
 </RelativeLayout>

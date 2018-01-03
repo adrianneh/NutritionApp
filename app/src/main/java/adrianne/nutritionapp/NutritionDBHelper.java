@@ -12,18 +12,20 @@ public class NutritionDBHelper extends SQLiteOpenHelper {
     public static String TABLE_NAME = "NUTRITION";
     public static int VERSION_NUM =1;
     public static final String KEY_ID = " _id";
-    public static final int COL_CALORIES = 0;
-    public static final int COL_FAT = 0;
-    public static final int COL_CARBS = 0;
+    public static final String COL_CALORIES = "calories";
+    public static final String COL_FAT = "fat";
+    public static final String COL_CARBS = "carbohydrates";
+    public static final String COL_DATE = "";
 
     public NutritionDBHelper(Context ctx) { super(ctx, DATABASE_NAME, null, VERSION_NUM);}
     @Override
     public void onCreate(SQLiteDatabase db) {
         String query = "CREATE TABLE " + TABLE_NAME + "("
                 + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + COL_CALORIES + " INTEGER"
-                + COL_FAT + " INTEGER"
-                + COL_CARBS + " INTEGER"
+                + COL_CALORIES + " VARCHAR2(10)"
+                + COL_FAT + " VARCHAR2(10)"
+                + COL_CARBS + " VARCHAR2(10)"
+                + COL_DATE + " VARCHAR2(30)"
                 + ");";
         db.execSQL(query);
         Log.i("NutritionDBHelper", "Calling onCreate");}
